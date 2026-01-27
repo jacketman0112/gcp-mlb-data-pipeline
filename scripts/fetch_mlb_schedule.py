@@ -3,11 +3,11 @@ import pymysql
 from datetime import datetime, timedelta, timezone
 
 DB_CONFIG = dict(
-    host="127.0.0.1",
-    port=3306,
-    user="mlb_user",
-    password="A0112a",
-    database="mlb",
+    host=os.getenv("DB_HOST", "127.0.0.1"),
+    port=int(os.getenv("DB_PORT", "3306")),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME", "mlb"),
     charset="utf8mb4",
 )
 
