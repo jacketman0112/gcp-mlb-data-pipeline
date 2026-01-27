@@ -1,6 +1,12 @@
+
 import requests
 import pymysql
 from datetime import datetime, timedelta, timezone
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DB_CONFIG = dict(
     host=os.getenv("DB_HOST", "127.0.0.1"),
@@ -10,6 +16,7 @@ DB_CONFIG = dict(
     database=os.getenv("DB_NAME", "mlb"),
     charset="utf8mb4",
 )
+
 
 def fetch_schedule(start_date: str, end_date: str):
     url = "https://statsapi.mlb.com/api/v1/schedule"
