@@ -1,0 +1,14 @@
+# Python 虛擬環境
+.venv/
+__pycache__/
+
+# 紀錄檔
+logs/
+*.log
+
+# 系統檔
+.DS_Store
+Thumbs.db
+
+# 金鑰 / 密碼檔（之後如果有）
+.env
